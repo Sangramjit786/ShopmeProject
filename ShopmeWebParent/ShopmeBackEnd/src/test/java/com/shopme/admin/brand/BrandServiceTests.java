@@ -20,7 +20,7 @@ public class BrandServiceTests {
 	
 	@InjectMocks private BrandService service;
 	
-	/*@Test
+	@Test
 	public void testCheckUniqueInNewModeReturnDuplicate() {
 		Integer id = null;
 		String name = "Acer";
@@ -65,5 +65,5 @@ public class BrandServiceTests {
 		
 		String result = service.checkUnique(id, "Acer Ltd");
 		assertThat(result).isEqualTo("OK");
-	}*/
+	}
 }

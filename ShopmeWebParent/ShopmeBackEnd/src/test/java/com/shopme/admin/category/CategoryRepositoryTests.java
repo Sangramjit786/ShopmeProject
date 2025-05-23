@@ -20,7 +20,7 @@ import com.shopme.common.entity.Category;
 @Rollback(false)
 public class CategoryRepositoryTests {
 
-	/*@Autowired
+	@Autowired
 	private CategoryRepository repo;
 	
 	@Test
@@ -113,5 +113,5 @@ public class CategoryRepositoryTests {
 		
 		assertThat(category).isNotNull();
 		assertThat(category.getAlias()).isEqualTo(alias);
-	}*/
+	}
 }

@@ -34,7 +34,7 @@ public class StateRestControllerTests {
 	
 	@Autowired StateRepository stateRepo;
 	
-	/*@Test
+	@Test
 	@WithMockUser(username = "nam", password = "something", roles = "Admin")
 	public void testListByCountries() throws Exception {
 		Integer countryId = 2;
@@ -109,5 +109,5 @@ public class StateRestControllerTests {
 		Optional<State> findById = stateRepo.findById(stateId);
 		
 		assertThat(findById).isNotPresent();
-	}*/
+	}
 }

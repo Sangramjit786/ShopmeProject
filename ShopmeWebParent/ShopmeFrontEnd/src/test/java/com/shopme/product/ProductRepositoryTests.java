@@ -16,11 +16,11 @@ public class ProductRepositoryTests {
 
 	@Autowired ProductRepository repo;
 	
-	/*@Test
+	@Test
 	public void testFindByAlias() {
 		String alias = "canon-eos-m50";
 		Product product = repo.findByAlias(alias);
 		
 		assertThat(product).isNotNull();
-	}*/
+	}
 }

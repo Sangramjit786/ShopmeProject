@@ -25,7 +25,7 @@ public class CustomerRepositoryTests {
 	@Autowired private CustomerRepository repo;
 	@Autowired private TestEntityManager entityManager;
 	
-	/*@Test
+	@Test
 	public void testCreateCustomer1() {
 		Integer countryId = 234; // USA
 		Country country = entityManager.find(Country.class, countryId);
@@ -151,5 +151,5 @@ public class CustomerRepositoryTests {
 		Customer customer = repo.findById(id).get();
 		
 		assertThat(customer.getAuthenticationType()).isEqualTo(AuthenticationType.DATABASE);
-	}*/
+	}
 }

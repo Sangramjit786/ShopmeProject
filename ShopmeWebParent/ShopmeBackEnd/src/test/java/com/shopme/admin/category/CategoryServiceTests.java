@@ -23,7 +23,7 @@ public class CategoryServiceTests {
 	@InjectMocks
 	private CategoryService service;
 	
-	/*@Test
+	@Test
 	public void testCheckUniqueInNewModeReturnDuplicateName() {
 		Integer id = null;
 		String name = "Computers";
@@ -115,5 +115,5 @@ public class CategoryServiceTests {
 		String result = service.checkUnique(id, name, alias);
 		
 		assertThat(result).isEqualTo("OK");
-	}*/	
+	}
 }

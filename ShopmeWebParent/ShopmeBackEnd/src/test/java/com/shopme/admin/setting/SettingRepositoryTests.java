@@ -21,7 +21,7 @@ public class SettingRepositoryTests {
 
 	@Autowired SettingRepository repo;
 	
-	/*@Test
+	@Test
 	public void testCreateGeneralSettings() {
 		Setting siteName = new Setting("SITE_NAME", "Shopme", SettingCategory.GENERAL);
 		Setting siteLogo = new Setting("SITE_LOGO", "Shopme.png", SettingCategory.GENERAL);
@@ -54,5 +54,5 @@ public class SettingRepositoryTests {
 		List<Setting> settings = repo.findByCategory(SettingCategory.GENERAL);
 		
 		settings.forEach(System.out::println);
-	}*/
+	}
 }

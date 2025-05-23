@@ -21,7 +21,7 @@ public class CountryRepositoryTests {
 	
 	@Autowired private CountryRepository repo;
 	
-	/*@Test
+	@Test
 	public void testCreateCountry() {
 		Country country = repo.save(new Country("China", "CN"));
 		assertThat(country).isNotNull();
@@ -65,5 +65,5 @@ public class CountryRepositoryTests {
 		
 		Optional<Country> findById = repo.findById(id);
 		assertThat(findById.isEmpty());
-	}*/
+	}
 }

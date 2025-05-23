@@ -1,5 +1,6 @@
 package com.shopme.common.entity.product;
 
+import com.shopme.common.Constants;
 import com.shopme.common.entity.IdBasedEntity;
 
 import jakarta.persistence.Column;
@@ -52,6 +53,8 @@ public class ProductImage extends IdBasedEntity {
 	
 	@Transient
 	public String getImagePath() {
-		return "/product-images/" + product.getId() + "/extras/" + this.name;
+		//return "/product-images/" + product.getId() + "/extras/" + this.name;  //This is line required for image path from local machine
+		
+		return Constants.S3_BASE_URI + "/product-images/" + product.getId() + "/extras/" + this.name;  //This line used to access images from Amazon AWS S3 bucket 'shopme-imagefiles'
 	}
 }

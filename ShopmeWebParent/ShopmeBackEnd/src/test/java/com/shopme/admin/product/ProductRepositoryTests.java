@@ -28,7 +28,7 @@ public class ProductRepositoryTests {
 	@Autowired
 	private TestEntityManager entityManager;
 	
-	/*@Test
+	@Test
 	public void testCreateProduct() {
 		Brand brand = entityManager.find(Brand.class, 37);
 		Category category = entityManager.find(Category.class, 5);
@@ -121,5 +121,11 @@ public class ProductRepositoryTests {
 		
 		Product savedProduct = repo.save(product);
 		assertThat(savedProduct.getDetails()).isNotEmpty();		
-	}*/
+	}
+	
+	@Test
+	public void testUpdateReviewCountAndAverageRating() {
+		Integer productId = 100;
+		repo.updateReviewCountAndAverageRating(productId);
+	}
 }

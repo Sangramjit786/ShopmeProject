@@ -22,7 +22,7 @@ import com.shopme.common.entity.User;
 @AutoConfigureTestDatabase(replace = Replace.NONE)
 @Rollback(false)
 public class UserRepositoryTests {
-	/*@Autowired
+	@Autowired
 	private UserRepository repo;
 	
 	@Autowired
@@ -159,6 +159,6 @@ public class UserRepositoryTests {
 		listUsers.forEach(user -> System.out.println(user));	
 		
 		assertThat(listUsers.size()).isGreaterThan(0);
-	}*/
+	}
 	
 }

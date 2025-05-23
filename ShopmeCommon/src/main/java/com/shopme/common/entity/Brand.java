@@ -3,6 +3,8 @@ package com.shopme.common.entity;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.shopme.common.Constants;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
@@ -76,6 +78,8 @@ public class Brand extends IdBasedEntity {
 	public String getLogoPath() {
 		if (this.id == null) return "/images/image-thumbnail.png";
 		
-		return "/brand-logos/" + this.id + "/" + this.logo;		
+		//return "/brand-logos/" + this.id + "/" + this.logo;	//This is line required for image path from local machine
+		
+		return Constants.S3_BASE_URI + "/brand-logos/" + this.id + "/" + this.logo; //This line used to access images from Amazon AWS S3 bucket 'shopme-imagefiles'
 	}
 }

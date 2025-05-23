@@ -22,7 +22,7 @@ public class BrandRepositoryTests {
 	@Autowired
 	private BrandRepository repo;
 	
-	/*@Test
+	@Test
 	public void testCreateBrand1() {
 		Category laptops = new Category(6);
 		Brand acer = new Brand("Acer");
@@ -95,5 +95,5 @@ public class BrandRepositoryTests {
 		Optional<Brand> result = repo.findById(id);
 		
 		assertThat(result.isEmpty());
-	}*/
+	}
 }

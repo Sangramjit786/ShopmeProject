@@ -14,7 +14,8 @@ import com.shopme.admin.paging.PagingAndSortingArgumentResolver;
 @Configuration
 public class MvcConfig implements WebMvcConfigurer {
 
-	@Override
+	/*This segment of code is required for local machine environment*/
+	/*@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		exposeDirectory("user-photos", registry);
 		exposeDirectory("../category-images", registry);
@@ -31,7 +32,7 @@ public class MvcConfig implements WebMvcConfigurer {
 				
 		registry.addResourceHandler(logicalPath)
 			.addResourceLocations("file:/" + absolutePath + "/");		
-	}
+	}*/
 
 	@Override
 	public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {

@@ -4,8 +4,10 @@ import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+import com.shopme.common.Constants;
 import com.shopme.common.entity.setting.Setting;
 
 import jakarta.servlet.Filter;
@@ -16,6 +18,7 @@ import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServletRequest;
 
 @Component
+@Order(-123)
 public class SettingFilter implements Filter {
 	
 	@Autowired
@@ -40,6 +43,8 @@ public class SettingFilter implements Filter {
 			request.setAttribute(setting.getKey(), setting.getValue());
 			System.out.println(setting.getKey() + " == > " + setting.getValue());
 		});
+		
+		request.setAttribute("S3_BASE_URI", Constants.S3_BASE_URI); /*This line is required for Amazon AWS Intregation */
 		
 		chain.doFilter(request, response);
 

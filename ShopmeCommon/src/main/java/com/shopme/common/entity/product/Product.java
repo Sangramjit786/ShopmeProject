@@ -7,6 +7,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import com.shopme.common.Constants;
 import com.shopme.common.entity.Brand;
 import com.shopme.common.entity.Category;
 import com.shopme.common.entity.IdBasedEntity;
@@ -76,11 +77,21 @@ public class Product extends IdBasedEntity {
 	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<ProductDetail> details = new ArrayList<>();
 	
+	private int reviewCount;
+	private float averageRating;
+	
+	@Transient private boolean customerCanReview;
+	@Transient private boolean reviewedByCustomer;
+	
 	public Product(Integer id) {
 		this.id = id;
 	}
 
 	public Product() {
+	}
+	
+	public Product(String name) {
+		this.name = name;
 	}
 
 	public String getName() {
@@ -248,7 +259,9 @@ public class Product extends IdBasedEntity {
 	public String getMainImagePath() {
 		if (id == null || mainImage == null) return "/images/image-thumbnail.png";
 		
-		return "/product-images/" + this.id + "/" + this.mainImage;
+		//return "/product-images/" + this.id + "/" + this.mainImage; //This is line required for image path from local machine
+		
+		return Constants.S3_BASE_URI +"/product-images/" + this.id + "/" + this.mainImage; //This line used to access images from Amazon AWS S3 bucket 'shopme-imagefiles'
 	}
 
 	public List<ProductDetail> getDetails() {
@@ -295,4 +308,42 @@ public class Product extends IdBasedEntity {
 		}
 		return this.price;
 	}
+
+	public int getReviewCount() {
+		return reviewCount;
+	}
+
+	public void setReviewCount(int reviewCount) {
+		this.reviewCount = reviewCount;
+	}
+
+	public float getAverageRating() {
+		return averageRating;
+	}
+
+	public void setAverageRating(float averageRating) {
+		this.averageRating = averageRating;
+	}
+	
+	@Transient
+	public String getURI() {
+		return "/p/" + this.alias + "/";
+	}
+
+	public boolean isCustomerCanReview() {
+		return customerCanReview;
+	}
+
+	public void setCustomerCanReview(boolean customerCanReview) {
+		this.customerCanReview = customerCanReview;
+	}
+
+	public boolean isReviewedByCustomer() {
+		return reviewedByCustomer;
+	}
+
+	public void setReviewedByCustomer(boolean reviewedByCustomer) {
+		this.reviewedByCustomer = reviewedByCustomer;
+	}
+	
 }

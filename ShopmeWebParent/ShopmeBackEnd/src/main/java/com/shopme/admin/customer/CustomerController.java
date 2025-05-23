@@ -3,8 +3,6 @@ package com.shopme.admin.customer;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -83,7 +81,7 @@ private String defaultRedirectURL = "redirect:/customers/page/1?sortField=firstN
 	}
 	
 	@PostMapping("/customers/save")
-	public String saveCustomer(Customer customer, Model model, RedirectAttributes ra) {
+	public String saveCustomer(Customer customer, RedirectAttributes ra) {
 		service.save(customer);
 		ra.addFlashAttribute("message", "The customer ID " + customer.getId() + " has been updated successfully.");
 		return defaultRedirectURL;

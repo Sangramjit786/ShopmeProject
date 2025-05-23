@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+import com.shopme.common.Constants;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -122,7 +124,9 @@ public class User extends IdBasedEntity {
 	public String getPhotosImagePath() {
 		if (id == null || photos == null) return "/images/default-user.png";
 		
-		return "/user-photos/" + this.id + "/" + this.photos;
+//		return "/user-photos/" + this.id + "/" + this.photos;  //This is line required for image path from local machine
+		
+		return Constants.S3_BASE_URI + "/user-photos/" + this.id + "/" + this.photos;  //This line used to access images from Amazon AWS S3 bucket 'shopme-imagefiles'
 	}
 	
 	@Transient

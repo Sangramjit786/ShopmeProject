@@ -23,7 +23,7 @@ public class StateRepositoryTests {
 	@Autowired private StateRepository repo;
 	@Autowired private TestEntityManager entityManager;
 	
-	/*@Test
+	@Test
 	public void testCreateStatesInIndia() {
 		Integer countryId = 1;
 		Country country = entityManager.find(Country.class, countryId);
@@ -88,5 +88,5 @@ public class StateRepositoryTests {
 
 		Optional<State> findById = repo.findById(stateId);
 		assertThat(findById.isEmpty());		
-	}*/
+	}
 }

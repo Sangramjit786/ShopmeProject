@@ -7,7 +7,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 public class PasswordEncoderTest {
 	
-	/*@Test
+	@Test
 	public void testEncodePassword() {
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		String rawPassword = "nam2020";
@@ -18,6 +18,6 @@ public class PasswordEncoderTest {
 		boolean matches = passwordEncoder.matches(rawPassword, encodedPassword);
 		
 		assertThat(matches).isTrue();
-	}*/
+	}
 
 }

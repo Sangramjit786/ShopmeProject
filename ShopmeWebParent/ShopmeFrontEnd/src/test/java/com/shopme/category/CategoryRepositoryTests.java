@@ -18,7 +18,7 @@ public class CategoryRepositoryTests {
 
 	@Autowired private CategoryRepository repo;
 
-	/*@Test
+	@Test
 	public void testListEnabledCategories() {
 		List<Category> categories = repo.findAllEnabled();
 		categories.forEach(category -> {
@@ -32,5 +32,5 @@ public class CategoryRepositoryTests {
 		Category category = repo.findByAliasEnabled(alias);
 		
 		assertThat(category).isNotNull();
-	}*/
+	}
 }

@@ -22,7 +22,7 @@ public class CurrencyRepositoryTests {
 	@Autowired
 	private CurrencyRepository repo;
 	
-	/*@Test
+	@Test
 	public void testCreateCurrencies() {
 		List<Currency> listCurrencies = Arrays.asList(
 			new Currency("United States Dollar", "$", "USD"),
@@ -53,5 +53,5 @@ public class CurrencyRepositoryTests {
 		currencies.forEach(System.out::println);
 		
 		assertThat(currencies.size()).isGreaterThan(0);
-	}*/
+	}
 }

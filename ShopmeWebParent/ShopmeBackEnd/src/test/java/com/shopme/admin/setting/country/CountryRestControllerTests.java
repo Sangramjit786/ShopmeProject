@@ -34,7 +34,7 @@ public class CountryRestControllerTests {
 	
 	@Autowired CountryRepository repo;
 	
-	/*@Test
+	@Test
 	@WithMockUser(username = "namjavaprogrammer@gmail.com", password = "something", roles = "ADMIN")
 	public void testListCountries() throws Exception {
 		String url = "/countries/list";
@@ -113,5 +113,5 @@ public class CountryRestControllerTests {
 		Optional<Country> findById = repo.findById(countryId);
 		
 		assertThat(findById).isNotPresent();
-	}*/
+	}
 }
