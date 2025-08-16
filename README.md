@@ -272,7 +272,48 @@ Below is the step-by-step documentation of all 239 development points.
 236. **Test Voting Reviews on Smartphone** – Verified on mobile.  
 237. **Understand Requirements of Product Question Module** – Planned Q&A section.  
 238. **Understand Requirement of Admin Dashboard** – Designed summary dashboard for admin.  
-239. **Test Admin Dashboard** – Verified responsiveness and functionality.  
+239. **Test Admin Dashboard** – Verified responsiveness and functionality.
+
+## 📂 Project Structure
+
+The **ShopmeProject** is a **multi-module Maven project** designed to separate concerns into reusable modules for backend, frontend, and shared common code. Below is the high-level structure:
+
+ShopmeProject/
+│── .settings/ # IDE-specific settings (Eclipse/STS)
+│── .mvn/wrapper/ # Maven Wrapper configuration
+│── mvnw / mvnw.cmd # Maven wrapper scripts for build consistency
+│── pom.xml # Parent POM managing all modules
+│── .gitignore # Git ignore rules
+│── .project # Eclipse project metadata
+│── README.md # Documentation file
+│
+├── ShopmeCommon/ # Common/shared module
+│ └── pom.xml # POM for common entities & utilities
+│ └── src/ # Shared Java code (entities, utils, exceptions)
+│
+├── ShopmeWebParent/ # Parent module for web components
+│ └── pom.xml # Manages frontend & backend dependencies
+│ └── .mvn/wrapper/ # Maven wrapper config for sub-module
+│
+├── ShopmeBackEnd/ # Backend Admin application
+│ ├── src/ # Source code (controllers, services, repos, configs)
+│ ├── user-photos/ # Uploaded profile photos of users
+│ ├── Shopme-backend.log # Application log file
+│ ├── pom.xml # Module-specific dependencies
+│ ├── mvnw / mvnw.cmd # Maven wrapper scripts
+│ └── .gitignore
+│
+├── ShopmeFrontEnd/ # Customer-facing storefront application
+│ ├── src/ # Source code (controllers, services, views)
+│ ├── brand-logos/ # Uploaded logos for brands
+│ ├── category-images/ # Uploaded category images
+│ ├── product-images/ # Uploaded product images
+│ ├── site-logo/ # Logo used for storefront site
+│ ├── src/main/resources/ # Static resources & properties
+│ ├── pom.xml # Module-specific dependencies
+│ ├── mvnw / mvnw.cmd # Maven wrapper scripts
+│ └── .gitignore
+│  
 
 
  
