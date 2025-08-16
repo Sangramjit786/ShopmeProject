@@ -417,5 +417,51 @@ Make sure you have the following installed:
 git clone https://github.com/your-username/shopme.git
 cd shopme
 
+### 3️⃣ Configure Database
 
+Update application.properties or application.yml in:
+ShopmeBackEnd/src/main/resources/
+ShopmeFrontEnd/src/main/resources/
+
+Example:
+```
+spring.datasource.url=jdbc:mysql://localhost:3306/shopmedb
+spring.datasource.username=root
+spring.datasource.password=yourpassword
+spring.jpa.hibernate.ddl-auto=update
+```
+### 4️⃣ Run the Application
+
+Run from root directory:
+```
+./mvnw clean install
+./mvnw spring-boot:run -pl ShopmeBackEnd
+./mvnw spring-boot:run -pl ShopmeFrontEnd
+``
+
+Admin Panel: http://localhost:8080
+Storefront: http://localhost:8081
+
+### 🧪 Testing
+
+Run unit tests:
+```
+./mvnw test
+```
+Integration tests ensure backend + frontend + database work together.
+
+### 🚀 Deployment
+On AWS / Heroku:
+
+Package the app:
+```
+./mvnw clean package
+```
+Deploy generated .jar files from ShopmeBackEnd/target/ and ShopmeFrontEnd/target/.
+
+### Configure environment variables:
+
+DB_HOST, DB_USER, DB_PASS
+AWS_ACCESS_KEY, AWS_SECRET_KEY
+PAYPAL_CLIENT_ID, PAYPAL_SECRET
 
