@@ -278,6 +278,7 @@ Below is the step-by-step documentation of all 239 development points.
 
 The **ShopmeProject** is a **multi-module Maven project** designed to separate concerns into reusable modules for backend, frontend, and shared common code. Below is the high-level structure:
 
+```
 ShopmeProject/
 │── .settings/ # IDE-specific settings (Eclipse/STS)
 │── .mvn/wrapper/ # Maven Wrapper configuration
@@ -314,7 +315,7 @@ ShopmeProject/
 │ ├── mvnw / mvnw.cmd # Maven wrapper scripts
 │ └── .gitignore
 │  
-
+```
 
  
 
