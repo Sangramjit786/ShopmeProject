@@ -357,4 +357,65 @@ ShopmeProject/
 
 ---
 
+# 🛒 Shopme E-commerce Project
+
+Shopme is a **full-stack e-commerce platform** built with **Spring Boot, Maven, and Thymeleaf**.  
+It follows a **multi-module architecture** with separate modules for common code, backend admin panel, and customer-facing storefront.
+
+---
+
+## 🚀 Features
+
+### 🔑 Admin Panel (ShopmeBackEnd)
+- Manage **Users, Roles, Categories, Brands, Products, Orders, Settings**  
+- Upload and manage **user profile photos**  
+- Generate admin reports and activity logs  
+- Role-based access control with **Spring Security**
+
+### 🛍️ Customer Storefront (ShopmeFrontEnd)
+- Browse categories, brands, and products  
+- Add to cart, checkout, and place orders  
+- Secure payments via **PayPal / Stripe integration**  
+- Customer registration, login, and order tracking  
+- Product reviews and ratings  
+- Responsive UI with **Thymeleaf templates**
+
+### ⚙️ Common Module (ShopmeCommon)
+- Shared **entities, enums, constants, and utilities**  
+- Centralized model layer for consistency across admin & frontend
+
+---
+
+## 🏗️ Tech Stack
+
+- **Backend**: Spring Boot, Spring Data JPA, Spring Security, Hibernate  
+- **Frontend**: Thymeleaf, Bootstrap, HTML, CSS, JS  
+- **Database**: MySQL  
+- **Build Tool**: Maven (multi-module project)  
+- **Deployment**: AWS / Heroku  
+- **Payment Gateway**: PayPal / Stripe  
+- **Storage**: AWS S3 (images & logos) or local file system  
+
+---
+
+## 📂 Project Structure
+
+👉 Refer to the [Project Structure](#-project-structure) section above for detailed explanation.  
+
+---
+
+## ⚡ Getting Started
+
+### 1️⃣ Prerequisites
+Make sure you have the following installed:
+- [Java 17+](https://adoptopenjdk.net/)  
+- [Maven 3.8+](https://maven.apache.org/)  
+- [MySQL 8+](https://dev.mysql.com/downloads/mysql/)  
+
+### 2️⃣ Clone the Repository
+```bash
+git clone https://github.com/your-username/shopme.git
+cd shopme
+
+
 
