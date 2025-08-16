@@ -317,10 +317,44 @@ ShopmeProject/
 │  
 ```
 
- 
+---
 
 ---
 
-⚡ Because the README is very long (239 explanations), I can generate the **rest in chunks (61–239)** so you can copy them step by step into your repo.  
+### 📌 Explanation of Modules
 
-Would you like me to **continue from 61 → 239 in the same structured format**, or should I **club them into bigger grouped summaries** (like Users, Categories, Products, Orders, Payments, Deployment, Reports, Reviews) for a more concise README?
+- **ShopmeCommon**  
+  Contains **common entities, enums, utility classes, and exceptions** shared between backend and frontend.  
+  Example: `User`, `Role`, `Category`, `Brand`, etc.  
+
+- **ShopmeWebParent**  
+  A **parent aggregator POM** for web-related modules (`ShopmeBackEnd` & `ShopmeFrontEnd`).  
+  Defines dependency management, plugin versions, and acts as a container.  
+
+- **ShopmeBackEnd** (Admin Panel)  
+  - Provides an **administration console** for managing users, categories, products, brands, settings, and orders.  
+  - Uses Spring Boot, Spring Security, Spring Data JPA, and Thymeleaf for backend logic and admin views.  
+  - Stores uploaded files like **user profile photos**.  
+  - Writes logs to `Shopme-backend.log`.  
+
+- **ShopmeFrontEnd** (Customer Storefront)  
+  - Provides a **shopping website** for customers (browse products, cart, checkout, payment).  
+  - Manages **static images** for brands, categories, products, and site logo.  
+  - Uses Spring Boot with Thymeleaf for rendering customer pages.  
+
+- **.mvn/wrapper + mvnw**  
+  Maven Wrapper ensures builds run with a consistent Maven version without requiring local installation.  
+
+- **pom.xml (root)**  
+  Root **multi-module POM** that aggregates all child modules.  
+
+---
+
+### 🔑 Key Points
+- Multi-module design allows **separation of concerns** (common code, backend admin, frontend shop).  
+- Easy to maintain and deploy **independent modules**.  
+- Upload directories (`user-photos`, `brand-logos`, `category-images`, `product-images`, `site-logo`) are kept at module level for better organization.  
+
+---
+
+
