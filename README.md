@@ -6,6 +6,36 @@ The project covers everything from **user management, product catalog, shopping 
 Below is the step-by-step documentation of all 239 development points.  
 
 ---
+### Key Actors for Project:
+<img width="996" height="515" alt="image" src="https://github.com/user-attachments/assets/fa4a5d09-7a2e-461c-83f2-4f4dcf4c7bb7" />
+
+### Visitor's Use Case:
+<img width="567" height="307" alt="image" src="https://github.com/user-attachments/assets/8b57a1e9-9f70-4692-b7ef-3ce7a2b0ba56" />
+
+### Use Case for Customer:
+<img width="811" height="485" alt="image" src="https://github.com/user-attachments/assets/9c221d96-4ee1-43d0-846d-885e32afba94" />
+
+### Use Case for Editor:
+<img width="610" height="461" alt="image" src="https://github.com/user-attachments/assets/c3ddc3e9-8b57-42bf-9878-4e22248f7b25" />
+
+### Use Case for SalesPersons:
+<img width="755" height="445" alt="image" src="https://github.com/user-attachments/assets/79026c52-475c-47ee-8e35-ddb220fc2863" />
+
+### Use Case for Assistants:
+<img width="470" height="317" alt="image" src="https://github.com/user-attachments/assets/4450b600-cd1e-4bd8-bf60-d737f97ee2e7" />
+
+### Use Case for Shippers:
+<img width="616" height="303" alt="image" src="https://github.com/user-attachments/assets/0fa10b0e-d51f-402a-b240-b4903529fb92" />
+
+### Use Case for Administrators:
+<img width="636" height="325" alt="image" src="https://github.com/user-attachments/assets/99858696-98aa-46a4-9dd8-96b9f3f2da27" />
+
+### Project Structure:
+<img width="927" height="572" alt="image" src="https://github.com/user-attachments/assets/3fefa9f4-0ea0-45e9-bba1-4722234ed53f" />
+
+### Multi-Module Project Structure:
+<img width="667" height="452" alt="image" src="https://github.com/user-attachments/assets/61ba138f-f461-453a-8db6-88ca2306e365" />
+
 
 ## 📌 Development Journey
 
@@ -319,7 +349,6 @@ ShopmeProject/
 
 ---
 
----
 
 ### 📌 Explanation of Modules
 
